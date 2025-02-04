@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Enhanced Solar Dashboard with Improved Graphs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarMonitor - Dashboard</title>
+
+  <!-- Chart.js for Data Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+
+  <link rel="stylesheet" href="../CSS files/global.css" />
+  <link rel="stylesheet" href="../CSS files/dashboard.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="dash-header">
+    <div class="dash-logo">SolarMonitor</div>
+    <nav class="dash-nav">
+      <ul>
+        <li><a href="index.html" class="dash-nav-link">Home</a></li>
+        <li><a href="dashboard.html" class="dash-nav-link active">Dashboard</a></li>
+        <li><a href="FAQs.html" class="dash-nav-link">FAQs</a></li>
+        <li><a href="support.html" class="dash-nav-link">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="dash-main">
+    
+    <!-- Page Title -->
+    <section class="dash-intro">
+      <h1 class="dash-title">Solar Panel Monitoring Dashboard</h1>
+      <p class="dash-subtitle">Live data and performance tracking</p>
+    </section>
+
+    <!-- REAL-TIME METRICS (Cards) -->
+    <section class="metrics-row">
+      <div class="metric-box">
+        <h2>Energy Output</h2>
+        <p class="metric-value" id="energyOutput">-- kWh</p>
+      </div>
+      <div class="metric-box">
+        <h2>Tilt Angle</h2>
+        <p class="metric-value" id="tiltAngle">--°</p>
+      </div>
+      <div class="metric-box">
+        <h2>System Status</h2>
+        <p class="metric-value" id="systemStatus">Loading...</p>
+      </div>
+    </section>
+
+    <!-- CHARTS SECTION -->
+    <section class="charts-row">
+      <!-- Energy Trend -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Energy Output Over Time</h2>
+        <div class="chart-container">
+          <canvas id="energyChart"></canvas>
+        </div>
+      </div>
+      <!-- Efficiency Comparison -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Efficiency Loss Due to Dust</h2>
+        <div class="chart-container">
+          <canvas id="efficiencyChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Charts Row -->
+    <section class="charts-row">
+      <!-- Sunlight Intensity -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Sunlight Intensity Over Time</h2>
+        <div class="chart-container">
+          <canvas id="sunlightChart"></canvas>
+        </div>
+      </div>
+      <!-- Wind Speed -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Wind Speed Trends</h2>
+        <div class="chart-container">
+          <canvas id="windSpeedChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cleaning & Maintenance Analytics -->
+    <section class="charts-row">
+      <!-- Dust Accumulation -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Dust Accumulation Over Time</h2>
+        <div class="chart-container">
+          <canvas id="dustChart"></canvas>
+        </div>
+      </div>
+      <!-- Cleaning Actions Log -->
+      <div class="chart-wrapper">
+        <h2 class="chart-heading">Cleaning Activations</h2>
+        <div class="chart-container">
+          <canvas id="cleaningChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM LOGS -->
+    <section class="logs-section">
+      <h2 class="logs-heading">System Logs</h2>
+      <div class="logs-table-wrap">
+        <table class="logs-table" id="logsTable">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Populated dynamically by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <section class="actions-section">
+      <h2>Quick Actions</h2>
+      <button class="action-btn" id="startCleaningBtn">Start Cleaning</button>
+      <button class="action-btn" id="resetSystemBtn">Reset System</button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="dash-footer">
+    <p>&copy; 2025 SolarMonitor. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Real-Time Updates & Chart Rendering -->
+  <script src="../JS files/dashboard.js"></script>
+</body>
+</html>
+
+</body>
+</html>
